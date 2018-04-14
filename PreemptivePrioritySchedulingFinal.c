@@ -78,14 +78,14 @@ int main()
       {
             printf("\nEnter the details for Process P%d:\n\n",i+1);
             
-            printf("Enter Arrival Time:\t");
+            printf("Enter the Arrival Time:\t");
             scanf("%d", &p[i].arrivalTime );
             
-	    printf("Enter Service Time:\t");
+	    printf("Enter the Burst Time:\t");
             scanf("%d", &p[i].burstTime);
        
 
-	    printf("Enter Priority:\t");
+	    printf("Enter the Priority:\t");
             scanf("%d", &p[i].priority);
 
             p[i].processID=i+1;
