@@ -111,7 +111,8 @@ void performPriority()
 				insert(proc[j]);
 			}
 		}
-		if(check(ready_queue[rear],ready_queue[rear+1]))
+		int temp=1;
+		if(temp == check(ready_queue[rear],ready_queue[rear+1]))
 		{
 			ready_queue[rear].burstTime -= i;
 		}		
@@ -151,7 +152,7 @@ void insert(process a)
 		ready_queue[rear] = a;
 	}
 }
-bool check(process a, process b)
+int check(process a, process b)
 {
 	if(a.priority>b.priority)
 	return true;
