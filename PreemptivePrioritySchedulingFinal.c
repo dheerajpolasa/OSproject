@@ -9,7 +9,7 @@ struct process p[10];
 
 int n;
 
-void calculate(int burstTime)
+void performPriority(int burstTime)
 {
 	int t = 0, large;
 	float wt = 0, tt = 0, averageWt, averageTt; 
@@ -46,7 +46,7 @@ void calculate(int burstTime)
 
 }
 
-void process_select()
+void arrivalSorting()
 {
       struct process temp;
       for(int i = 0; i < n - 1; i++)
@@ -94,7 +94,7 @@ int main()
             st = st + p[i].burstTime;
       }
       
-      process_select();
-      calculate(st);
+      arrivalSorting();
+      performPriority(st);
       return 0;
 }
